@@ -1,0 +1,14 @@
+clear;close all;clc
+f = @(x) 1/x
+a = 1;
+b = 2;
+n = 4;
+h = (b-a)/n;
+s = 0;
+int = linspace(a,b,n+1)
+
+for i = 1:n
+  s = s + f(int(i)) + f(int(i+1))
+endfor
+
+resultado = (h/2)*s
